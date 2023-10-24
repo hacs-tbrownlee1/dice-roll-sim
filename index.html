@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dice Roll Simulator</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="main.js"></script>
+    </head>
+    <body>
+        <h1>Dice Rolling Simulator</h1>
+        <hr>
+        <p>
+            Roll <input type="number" id="dice_count" placeholder="how many"> dice...
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="radio" id="5_times" name="act">
+                        <label for="5_times">5 times</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="n_times" name="act">
+                        <label for="n_times"><input type="number" id="roll_count" placeholder="how many"> times</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="until" name="act">
+                        <label for="until">Until I roll <input type="text" id="until_outcome" placeholder="comma-separated numbers"></label>
+                        <span>(<input type="checkbox" id="preserve_order">Preserve order)</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="commit_roll">Roll!</button>
+        <hr>
+        <p id="final-roll-count"></p>
+        <table id="roll-list"></table>
+    </body>
+</html>
